@@ -91,21 +91,22 @@ Ingrese una opción: """)
 
                     if modificacion == "1":
                         nombre_mod = input("Ingrese nuevo nombre: ").capitalize()
-                        
-                        # Copiar la información y eliminar el contacto viejo
-                        lista_contactos[nombre_mod] = lista_contactos.pop(entrada)
-                        
-                        # Actualizar la lista de nombres
-                        lista_nombres.append(nombre_mod)
-                        lista_nombres.remove(entrada)
 
-                        input("\nContacto modificado con éxito. Presione enter para volver.")
+                        if nombre_mod not in lista_nombres:
+                            lista_contactos[nombre_mod] = lista_contactos.pop(entrada)
+                            
+                            lista_nombres.append(nombre_mod)
+                            lista_nombres.remove(entrada)
+
+                            input("\nContacto modificado con éxito. Presione enter para volver.")
+                        else:
+                            input("\nYa existe un contacto con ese nombre. Presione enter para volver.")
 
                     elif modificacion == "2":
                         numero_mod = input("Ingrese nuevo número: ")
                         try:
-                            int(numero_mod)  # Verificar si es número válido
-                            lista_contactos[entrada][0] = numero_mod  # Solo modificar el número
+                            int(numero_mod)  
+                            lista_contactos[entrada][0] = numero_mod  
 
                             input("\nNúmero modificado con éxito. Presione enter para volver.")
                             
@@ -114,7 +115,7 @@ Ingrese una opción: """)
 
                     elif modificacion == "3":
                         mail_mod = input("Ingrese nuevo mail: ")
-                        lista_contactos[entrada][1] = mail_mod  # Solo modificar el mail
+                        lista_contactos[entrada][1] = mail_mod  
 
                         input("\nMail modificado con éxito. Presione enter para volver.")
 
