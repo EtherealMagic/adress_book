@@ -14,7 +14,7 @@ Bienvenid@ a su agenda.
 """)
     interfaz = input("ingrese una entrada: ")
     try:
-        if interfaz == "1":
+        if interfaz == "1": 
             nombre = input("nombre del nuevo contacto: ").capitalize()
             telefono = input("número de telefono: ")
             mail = input("mail del nuevo contacto: ")
