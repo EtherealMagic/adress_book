@@ -1,2 +1,2 @@
-# Ejericio de agenda
-un ejercicio básico sobre el manejo de una agenda que me impuso chat gpt.
+# adress book exercise
+a bassic exercise about an adrees book with a interface.
